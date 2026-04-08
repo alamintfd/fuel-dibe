@@ -19,8 +19,8 @@ type Station = {
   location?: string;
   fuelType?: string;
   queueStatus?: string;
-  lat?: number;
-  lng?: number;
+  lat?: number | null;
+  lng?: number | null;
 };
 
 function LocationPicker({
@@ -126,8 +126,10 @@ export default function Map({
         .filter(
           (station) =>
             typeof station.lat === "number" &&
+            station.lat !== null &&
             !Number.isNaN(station.lat) &&
             typeof station.lng === "number" &&
+            station.lng !== null &&
             !Number.isNaN(station.lng)
         )
         .map((station, index) => (

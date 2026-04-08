@@ -1192,7 +1192,11 @@ export default function Home() {
           <div style={sectionTitleStyle}>Active Pump Map</div>
           <div style={mapWrapStyle}>
             <Map
-              stations={activeMapStations}
+              stations={activeMapStations.map((s) => ({
+                ...s,
+                lat: s.lat ?? undefined,
+                lng: s.lng ?? undefined,
+              }))}
               userLat={userCoords?.lat ?? null}
               userLng={userCoords?.lng ?? null}
             />
