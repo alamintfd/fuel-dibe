@@ -1203,6 +1203,30 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* ─── Footer ─── */}
+      <div style={footerStyle}>
+        <div style={footerInnerStyle}>
+          <div style={footerBrandStyle}>
+            <span style={{ fontSize: "18px" }}>⛽</span>
+            <span>Fuel<strong style={{ color: "#F59E0B" }}>Dibe</strong></span>
+          </div>
+          <div style={footerCreditStyle}>
+            Developed by{" "}
+            <a
+              href="https://www.facebook.com/alaminshoji/"
+              target="_blank"
+              rel="noreferrer"
+              style={footerLinkStyle}
+            >
+              Alamin Shoji
+            </a>
+          </div>
+          <div style={footerSubStyle}>
+            Community-powered fuel tracking for Bangladesh
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -2122,6 +2146,49 @@ const deleteStationBtnStyle: React.CSSProperties = {
   fontWeight: 700,
   cursor: "pointer",
   padding: "6px 10px",
+};
+
+const footerStyle: React.CSSProperties = {
+  borderTop: "1px solid #1e1e1e",
+  marginTop: "0",
+  padding: "32px 22px",
+  background: "#0a0a0a",
+};
+
+const footerInnerStyle: React.CSSProperties = {
+  maxWidth: "1180px",
+  margin: "0 auto",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: "10px",
+  textAlign: "center",
+};
+
+const footerBrandStyle: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
+  fontSize: "20px",
+  fontWeight: 800,
+  letterSpacing: "-0.5px",
+  color: "#fff",
+};
+
+const footerCreditStyle: React.CSSProperties = {
+  fontSize: "14px",
+  color: "#6b7280",
+};
+
+const footerLinkStyle: React.CSSProperties = {
+  color: "#F59E0B",
+  textDecoration: "none",
+  fontWeight: 700,
+};
+
+const footerSubStyle: React.CSSProperties = {
+  fontSize: "12px",
+  color: "#3f3f3f",
 };
 
 const emptyStyle: React.CSSProperties = {
